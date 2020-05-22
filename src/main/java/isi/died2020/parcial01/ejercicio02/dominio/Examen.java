@@ -2,7 +2,7 @@ package isi.died2020.parcial01.ejercicio02.dominio;
 
 import java.time.LocalDate;
 
-public class Examen {
+public class Examen implements Comparable<Examen>{
 	private static Integer ID_GENERATOR=0;
 
 	private Integer id;
@@ -61,6 +61,11 @@ public class Examen {
 	}
 	public void setFecha(LocalDate fecha) {
 		this.fecha = fecha;
+	}
+
+	@Override
+	public int compareTo(Examen o) {
+		return this.nota.compareTo(o.getNota());
 	}
 	
 	

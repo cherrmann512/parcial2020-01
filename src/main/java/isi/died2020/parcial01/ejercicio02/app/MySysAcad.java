@@ -1,5 +1,8 @@
 package isi.died2020.parcial01.ejercicio02.app;
 
+import java.util.List;
+
+import isi.died2020.parcial01.ejercicio02.Excepciones.InscribirAlumnoException;
 import isi.died2020.parcial01.ejercicio02.dominio.*;
 
 
@@ -24,8 +27,12 @@ public interface MySysAcad {
 	 * crea una nueva instancia de Inscripcion y 
 	 * asigna la inscripcion a la lista de inscripciones del alumno, 
 	 * de la materia y del docente
+	 * @throws InscribirAlumnoException 
 	 */
-	public void inscribirAlumnoExamen(Docente d,Alumno a, Materia m);
+	public void inscribirAlumnoExamen(Docente d,Alumno a, Materia m) throws InscribirAlumnoException;
 	
+	public void registrarNota(Examen e, Integer nota);
+	
+	public List<Materia> materiasAprobadas(Alumno m);
 
 }

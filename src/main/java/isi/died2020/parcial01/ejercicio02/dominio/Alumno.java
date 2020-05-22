@@ -48,5 +48,15 @@ public class Alumno {
 		this.materiasCursadas.add(e);
 		e.setInscripto(this);
 	}
+	
+	
+	public List<Examen> getExamenes() {
+		return examenes;
+	}
+	
+	public List<Inscripcion> getMateriasCursadas() {
+		return materiasCursadas;
+	}
+
 
 }
